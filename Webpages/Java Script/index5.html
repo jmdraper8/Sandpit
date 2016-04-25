@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title>Java Script Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+    
+    <p>How many fingers are you holding up?</p>
+    <input id="myNumber" />
+    <button id="guess">Guess</button>
+
+    <button id="useFunction">Function Me!</button>
+    
+
+    <script type="text/javascript">
+
+        //This is a comment
+
+        /* This is a 
+        multi line comment */
+
+        document.getElementById("guess").onclick=function() {
+
+            var gotIt = false;
+            var guesses = 1;
+            var x;
+
+            while (gotIt == false) {
+                x = Math.random();
+
+                x = (x*6);
+                x = Math.floor(x);
+
+                console.log(document.getElementById("myNumber").value + " == " + x);
+                if (document.getElementById("myNumber").value == x) {
+                    alert("I guessed correct!! It was a " + x + " and it only too me " + guesses + " guesses!");
+                    gotIt = true;
+                } else {
+                    guesses++;
+                }
+                
+
+            }   
+        }
+
+        function adding(a, b) {
+            return (a+b);
+        }
+        
+        document.getElementById("useFunction").onclick=function() {
+            console.log(adding(459, 390));
+        }
+
+       
+    </script>
+
+</body>
+</html>
