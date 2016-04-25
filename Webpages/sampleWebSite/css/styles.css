@@ -1,0 +1,265 @@
+    body {
+        margin: 0;
+        font-family: arial,helvetica,sans-serif;
+    }
+
+    #topBar {
+        background-color: #7A0000;
+        width: 100%;
+        height: 45px;
+        color: white;
+    }
+
+    .fixedWidth {
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    #logoDiv {
+        padding-top:5px;
+        float: left;
+        border-right: 1px solid #990000;
+        padding-right: 5px;
+    }
+
+    #signInDiv {
+        padding: 6px 80px 15px 20px;
+        font-weight: bold;
+        border-right: 1px solid #990000;
+        font-size: 0.9em;
+        width: 150px;
+        float: left
+    }
+
+    #signInDiv img {
+        position: relative;
+        top: 5px;
+    }
+ 
+    #topMenuDiv {
+        float: left;
+    }
+
+    #topMenuDiv ul {
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    #topMenuDiv li {
+        padding: 15px 20px 14px 20px;
+        list-style: none;
+        font-weight: bold;
+        font-size: 0.9em;
+        border-right: 1px solid #990000;
+        height: 100%;
+        float: left;
+    }
+
+    #searchDiv {
+        float: left;
+        padding: 10px 0 0 10px;
+    }
+
+    #searchDiv input {
+        height: 25px;
+        border: none;
+        padding-left: 10px;
+        font-size: 0.9em;
+        background-image: url(../images/search.png);
+        background-repeat: no-repeat;
+        background-position: right center;
+
+    }
+
+    .break {
+        clear: both;
+    }
+
+    #newsBar {
+        background-color: #990000;
+        width: 100%;
+        height: 90px;
+        color: white;
+    }
+
+    #newsBar p {
+        padding: 0;
+        margin:0;
+        padding-top: 10px;
+        float: left;
+    }
+
+    #newsHeader {
+        font-size: 3em;
+
+    }
+
+    #uk {
+        font-size: 0.7em;
+        padding-left: 20px;
+    }
+
+    #rss {
+        float: right;
+        margin-top: 35px;
+    }
+
+    #rss img {
+        height: 20px;
+        padding-left: 5px;
+        padding-bottom: 0;
+    }
+
+
+    #topicMenu {
+        
+    }
+
+    #topicMenu ul {
+        background-color: #3E0C0D;
+        padding: 5px 0 0 5px;
+        margin:0;
+        height: 20px;
+    }
+
+    #topicMenu li {
+        list-style: none;
+        font-size: 0.8em;
+        border-right: 1px solid #990000;
+        padding: 0 10px 0 10px;
+        float: left;
+        background-color: none;
+    }
+
+    .selected {
+        background-color: #EDEDED;
+        color: #666666;
+        height: 20px;
+        position: relative;
+        top: -4px;
+        padding-top:4px !important;
+
+    }
+
+    #content {
+        width: 100%;
+        color: #535353;
+        font-size: 0.8em;
+    }
+    .date {
+        font-weight: bold;
+    }
+
+    h1 {
+        color: #1F4F82;
+        font-size: 2.5em;
+    }
+
+    .headlineimage {
+        float: left;
+    }
+
+    .newsItems {
+        position: relative;
+        left: 10px;
+        top: -15px;
+        width: 300px;
+        float: left;
+        font-size: 1.3em;
+        
+    }
+
+    .newsItems a {
+        color: #1F4F82;
+    }
+
+    a {
+        text-decoration: none; 
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .video {
+        background-image: url(../images/video.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 30px;
+    }
+
+    .links {
+        line-height: 1.6em;
+    }
+
+    .sound {
+        background-image: url(../images/sound.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 30px;
+    }
+
+    #watchListen {
+        background-color: #EEEEEE;
+        float: right;
+        position: relative;
+        top: -70px;
+        width: 450px;
+    }
+
+    h2 {
+        color: #505050;
+        margin: 10px 0 10px 10px;
+        font-size: 1.8em;
+    }
+
+    .boxes {
+        float: right;
+        margin: 20px 10px 0 0;
+    }
+
+    .leftArrow {
+        float: left;
+        border-right: 1px solid white;
+    }
+
+    .rightArrow {
+        float: left;
+        border-left: 1px solid white;
+    }
+
+
+    .wlBlock {
+        float: left;
+        background-color: #D1700E;
+        width: 180px;
+        border-right: 1px solid white;
+    }
+
+    .wlBlock a {
+        color: white;
+        font-size: 1.2em;
+    }
+
+    .wlBlock p {
+        margin: 10px 10px 10px 10px;
+    }
+
+    #watchListen ul {
+        margin: 0;
+        padding: ;
+    }
+
+    #watchListen li {
+        list-style: none;
+        background-image: url(../images/live.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding: 10px 0 5px 50px;
+        font-size: 1.5em;
+    }
+
+    .bb {
+        border-bottom: 1px solid #DDDDDD;
+    }

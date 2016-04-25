@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <title>Java Script Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+    #circle {
+        background: #f00;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    </style>
+
+
+
+</head>
+
+<body>
+    
+    <p id="someText">Some Text </p>
+
+    <button id="myButton">Click me!</button>
+
+    <button id="textChange">Change Div Text</button>
+
+    <div id="firstDiv">This is a Div</div>
+
+    <button id="textAppend">Append Div Text</button>
+
+    <div id="secondDiv">This is a new Div</div>
+
+    <div id="thirdDiv"></div>
+
+    <button id="textCreate">Create Div Text</button>
+
+    <button id="hideCircle">Hide Circle!</button>
+
+    <button id="revealCircle">Reveal Circle!</button>
+
+    <p>...</p>
+
+
+    <div id="circle"></div>
+
+    <script type="text/javascript">
+
+        //This is a comment
+
+        /* This is a 
+        multi line comment */
+
+        document.getElementById("myButton").onclick=function() {
+
+            alert("Hi!");
+        }
+
+        document.getElementById("textChange").onclick=function() {
+
+            document.getElementById("firstDiv").innerHTML="New Div";
+        }
+
+        document.getElementById("textAppend").onclick=function() {
+
+            document.getElementById("secondDiv").innerHTML+=document.getElementById("firstDiv").innerHTML;
+        }
+
+        document.getElementById("textCreate").onclick=function() {
+
+            document.getElementById("thirdDiv").innerHTML="<ul><li>Dog</li><li>Cat</li></ul>";
+        }
+
+        document.getElementById("hideCircle").onclick=function() {
+
+            document.getElementById("circle").style.display="none";
+        }
+
+        document.getElementById("revealCircle").onclick=function() {
+
+            document.getElementById("circle").style.display="block";
+        }
+
+    </script>
+
+</body>
+</html>

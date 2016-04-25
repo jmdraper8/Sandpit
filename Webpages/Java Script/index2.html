@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <title>Java Script Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+    #circle {
+        background: #f00;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    </style>
+
+</head>
+
+<body>
+    
+    <input id="firstField" type="text" value="test"/>
+
+    <button id="submitButton">Press Me!</button>
+
+    <div id="firstDiv">This is some text</div>
+
+
+    <button id="foodButton">What are your favorite foods!</button>
+
+    <div id="secondDiv">My Favorite Foods: </div>
+
+    <script type="text/javascript">
+
+        //This is a comment
+
+        /* This is a 
+        multi line comment */
+
+        var myArray = new Array();
+
+        myArray[0]="Pizza";
+        myArray[1]="Chocolate";
+        myArray[2]="Beer";
+
+        console.log(myArray);
+        myOtherArray = ["Rain", "Hail", "Snow"];
+
+        console.log(myOtherArray);
+
+        myOtherArray.push("Sunshine");
+
+        console.log(myOtherArray);
+
+        myOtherArray.splice(2,0, "Blizzard", "Fog");
+
+        console.log(myOtherArray);
+
+
+        document.getElementById("submitButton").onclick=function() {
+
+            var newText = document.getElementById("firstField").value;
+
+            document.getElementById("firstDiv").innerHTML=newText;
+        }
+
+        document.getElementById("foodButton").onclick=function() {
+            var i = 0;
+            var arraySize = myArray.length;
+            console.log(arraySize);
+
+            while (myArray[i]) {
+                document.getElementById("secondDiv").innerHTML+=myArray[i];
+                if (i < (arraySize-1)) {
+                    document.getElementById("secondDiv").innerHTML+= ", ";
+                }
+                i++;
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

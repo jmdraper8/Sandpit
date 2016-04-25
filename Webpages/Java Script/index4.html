@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <title>Java Script Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+    
+    <p>How many fingers am I holding up?</p>
+    <input id="weather" />
+    <button id="weatherButton">Guess</button>
+    
+
+    <script type="text/javascript">
+
+        //This is a comment
+
+        /* This is a 
+        multi line comment */
+
+        document.getElementById("weatherButton").onclick=function() {
+            
+            var x = Math.random();
+
+            x = 5*x;
+            x=Math.floor(x);
+            x+=1;
+
+            if (document.getElementById("weather").value == x) {
+                alert("Yes you are correct, I was holding up " + x + " fingers!");
+            } else {
+                alert("No you are incorrect, I was holding up " + x + " fingers!");
+            }
+        }
+
+        
+
+
+
+
+        
+       
+    </script>
+
+</body>
+</html>

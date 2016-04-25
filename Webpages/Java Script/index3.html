@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <title>Java Script Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+</head>
+
+<body>
+    
+    <p>What is the weather?</p>
+    <input id="weather" />
+    <button id="weatherButton">Submit</button>
+    
+
+    <script type="text/javascript">
+
+        //This is a comment
+
+        /* This is a 
+        multi line comment */
+        var x = 2;
+
+        document.getElementById("weatherButton").onclick=function() {
+
+            if (document.getElementById("weather").value == "Rain") {
+                alert("Best to stay inside!");
+            } else {
+                alert("Time to go out!");
+            }
+        }
+       
+    </script>
+
+</body>
+</html>
