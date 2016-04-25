@@ -9,96 +9,96 @@
 
     <style type="text/css">
 
-    #redbox {
+    #box1 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: red;
+        background-color: red;
         float: left;
     }
 
-    #bluebox {
+    #box2 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: blue;
+        background-color: blue;
         float: left;
     }
 
 
-    #greenbox {
+    #box3 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 100px;
-        background: green;
+        background-color: green;
         float: left;
     }
 
-    #purplebox {
+    #box4 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: purple;
+        background-color: purple;
         float: left;
     }
 
-    #yellowbox {
+    #box5 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: yellow;
+        background-color: yellow;
         float: left;
     }
 
 
-    #redbox1 {
+    #box6 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 100px;
-        background: red;
+        background-color: red;
         float: left;
     }
 
-    #bluebox1 {
+    #box7 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 100px;
-        background: blue;
+        background-color: blue;
         float: left;
     }
 
 
-    #greenbox1 {
+    #box8 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: green;
+        background-color: green;
         float: left;
     }
 
-    #purplebox1 {
+    #box9 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 25px;
-        background: purple;
+        background-color: purple;
         float: left;
     }
 
-    #yellowbox1 {
+    #box10 {
         height: 100px;
         width: 100px;
         margin: 1px;
         border-radius: 100px;
-        background: yellow;
+        background-color: yellow;
         float: left;
     }
 
@@ -112,17 +112,17 @@
 <body>
     
     <p>Your Time : <span id="yourTime"></span></p>
-    <div id="redbox"></div>
-    <div id="bluebox"></div>
-    <div id="greenbox"></div>
-    <div id="purplebox"></div>
-    <div id="yellowbox"></div>
+    <div id="box1" onclick="clickBait('1')"></div>
+    <div id="box2" onclick="clickBait('2')"></div>
+    <div id="box3" onclick="clickBait('3')"></div>
+    <div id="box4" onclick="clickBait('4')"></div>
+    <div id="box5" onclick="clickBait('5')"></div>
     <div id="break"></div>
-    <div id="redbox1"></div>
-    <div id="bluebox1"></div>
-    <div id="greenbox1"></div>
-    <div id="purplebox1"></div>
-    <div id="yellowbox1"></div>
+    <div id="box6" onclick="clickBait('6')"></div>
+    <div id="box7" onclick="clickBait('7')"></div>
+    <div id="box8" onclick="clickBait('8')"></div>
+    <div id="box9" onclick="clickBait('9')"></div>
+    <div id="box10" onclick="clickBait('10')"></div>
     <br>
     <button id="startGame">Start Game!</button>
 
@@ -130,10 +130,61 @@
 
     <script type="text/javascript">
 
+    //initialise Time
     var clickedTime = 0;
     var createdTime = 0;
     var reactionTime = 0;
 
+    document.getElementById("startGame").onclick=function() {
+        var i = 1;
+        //Turn all the boxes to white
+        for (i=1; i<11; i++) {
+            var boxNo = "box" + i;
+            document.getElementById(boxNo).style.background="white";
+        }
+        randomBox();
+    }
+
+    function clickBait(clickedBox) {
+        //alert(clickedTime);
+
+        clickedTime = Date.now();
+        reactionTime = clickedTime - createdTime;
+        console.log(clickedTime + " = " + createdTime);
+        reactionTime = reactionTime / 1000;
+
+        document.getElementById("yourTime").innerHTML=reactionTime;
+        document.getElementById("box"+clickedBox).style.background="white";
+
+        randomBox();
+
+
+    }
+
+    function randomBox() {
+
+        var whichBox;
+
+        var ranBoxNo = Math.random();
+        ranBoxNo = ranBoxNo * 10 + 1;
+        ranBoxNo = Math.floor(ranBoxNo);
+        console.log(ranBoxNo);
+
+        var colorArray = ["purple", "red", "blue", "green", "yellow", "orange"];
+        var colorNo = Math.random();
+        colorNo = colorNo *6;
+        colorNo = Math.floor(colorNo);
+        var myColor = colorArray[colorNo];
+
+        console.log(myColor);
+
+        whichBox = "box" + ranBoxNo;
+        createdTime = Date.now();
+        document.getElementById(whichBox).style.background=myColor;
+        
+    }
+
+    /*
     document.getElementById("box").onclick=function() {
         clickedTime = Date.now();
 
@@ -154,8 +205,9 @@
             document.getElementById("box").style.display = "block";
             createdTime = Date.now();
         }, time);
+        }
+    */
 
-    }
 
 
     </script>
