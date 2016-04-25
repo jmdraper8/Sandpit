@@ -1,0 +1,52 @@
+﻿doctype html
+html
+	head
+		title= title
+		meta(charse="utf-8")
+		meta(http-equiv="Content-type" content="text/html")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		link(rel='stylesheet', href='/css/style.css')
+	body
+		#container
+			#topBar
+				.fidexWidth
+					#logoDiv
+						img(src="/images/bbcLogo.jpg")
+					#signInDiv
+						<img src="images/white-login-256.png" height="20"> Sign In
+					#topMenuDiv
+						ul
+							li News
+							li Sports
+							li Weather
+							li iPlayer
+							li Radio
+							li More...
+					#searchDiv
+						input(type="text" placeholder="Search")
+			#break
+			#newsBar
+				.fixedWidth
+					p#newsHeader News
+						<span id="uk">UK</span>
+					#rss
+						RSS
+						img(src="/images/RSS-icon.png")
+					#break
+					#topicMenu
+						ul
+							li Home
+							li World
+							li#selected UK
+							li England
+							li N. Ireland
+							li Scotland
+							li Wales
+							li Business
+							li Politics
+							li Health
+							li Education
+							li Sci/Environment
+							li Technology
+							li(style="border-right:none") Entertainments & Arts
+block content

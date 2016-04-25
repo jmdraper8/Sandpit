@@ -1,0 +1,116 @@
+html,
+body {
+  margin: 0;
+  font-family: arial, helvetica, sans-serif;
+}
+#topBar {
+  background-color: #7a0000;
+  width: 100%;
+  height: 45px;
+  color: #fff;
+}
+.fixedWidth {
+  width: 1200px;
+  margin: 0 auto;
+}
+#logoDiv {
+  padding-top: 5px;
+  float: left;
+  border-right: 1px solid #900;
+  padding-right: 5px;
+}
+#signInDiv {
+  padding: 6px 80px 15px 20px;
+  font-weight: bold;
+  border-right: 1px solid #900;
+  font-size: 0.9em;
+  width: 150px;
+  float: left;
+}
+#signInDiv img {
+  position: relative;
+  top: 5px;
+}
+#topMenuDiv {
+  float: left;
+}
+#topMenuDiv ul {
+  margin: 0;
+  padding: 0;
+}
+#topMenuDiv li {
+  padding: 15px 20px 14px 20px;
+  list-style: none;
+  font-weight: bold;
+  font-size: 0.9em;
+  border-right: 1px solid #900;
+  height: 100%;
+  float: left;
+}
+#searchDiv {
+  float: left;
+  padding: 10px 0 0 10px;
+}
+#searchDiv input {
+  height: 25px;
+  border: none;
+  padding-left: 10px;
+  font-size: 0.9em;
+  background-image: url("../images/search.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.break {
+  clear: both;
+}
+#newsBar {
+  background-color: #900;
+  width: 100%;
+  height: 90px;
+  color: #fff;
+}
+#newsBar p {
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+  float: left;
+}
+#newsHeader {
+  font-size: 3em;
+}
+#uk {
+  font-size: 0.7em;
+  padding-left: 20px;
+}
+#rsss {
+  float: right;
+  margin-top: 35px;
+}
+#rss img {
+  height: 20px;
+  padding-left: 5px;
+  padding-bottom: 0;
+}
+#topicMenu,
+#topicMenu ul {
+  background-color: #3e0c0d;
+  padding: 5px 0 0 5px;
+  margin: 0;
+  height: 20px;
+}
+#topicMenu li {
+  list-style: none;
+  font-size: 0.8em;
+  border-right: 1px solid #900;
+  padding: 0 10px 0 10px;
+  float: left;
+  background-color: none;
+}
+.selected {
+  background-color: #ededed;
+  color: #666;
+  height: 20px;
+  position: relative;
+  top: -4px;
+  padding-top: 4px;
+}
