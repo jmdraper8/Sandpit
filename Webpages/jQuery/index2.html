@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+
+   	<style type="">
+
+   	.redSquare {
+   		background-color: red;
+   		width: 200px;
+   		height: 200px;
+   		border-radius: 25px;
+   		margin: 5px;
+
+   	}
+
+   	#greenCircle {
+   		background-color: green;
+   		width: 200px;
+   		height: 200px;
+   		border-radius: 100px;
+   		margin: 5px;
+   	}
+
+   	</style>
+
+</head>
+
+<body>
+
+	<div id="greenCircle"></div>
+
+	<div class="redSquare"></div>
+
+	<p>This is some text!</p>
+
+	<iframe src="http://www.cnn.com"></iframe>
+
+	<script>
+
+		$("#greenCircle").click(function() {
+			$("p").html("New test");
+			alert($("p").html());
+		});
+
+		$("#greenCircle").hover(function() {
+			$("p").html("Hover");
+		});
+
+		$(".redSquare").click(function() {
+
+			$("iframe").attr("src", "http://www.bbc.com");
+
+		});
+
+
+
+	</script>
+    
+
+
+
+</body>
+</html>
