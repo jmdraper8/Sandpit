@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>jQuery Page</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+    <style>
+
+    #square {
+      height: 200px;
+      width: 200px;
+      background-color: green;
+      border-radius: 20px;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      font-family: helvetica;
+    }
+
+    #redSquare {
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      border-radius: 20px;
+      text-align: center;
+      vertical-align: middle;
+      color: white;
+      font-family: helvetica;
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="square">Drag Me!</div>
+
+
+    <div id="redSquare">Resize Me!</div>
+
+    <script type="text/javascript">
+
+      $("#square").draggable();
+
+      $("#redSquare").resizable();
+
+
+
+
+    </script>
+
+
+</body>
+</html>
