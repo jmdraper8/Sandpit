@@ -2,6 +2,15 @@
 
 	session_start();
 
+	if ($_GET["logout"]==1 AND $_SESSION['id'])  {
+		session_destroy();
+
+		$message="You have been logged out...";
+
+		session_start();
+
+	}
+
 	include("connection.php");
 
 	if ($_POST['submit']=="Sign Up") {
@@ -17,7 +26,7 @@
 
 			}
 
-		if($error) echo "There were error(s) in your signup details:".$error;
+		if($error) $error =  "There were error(s) in your signup details:".$error;
 			else {
 
 				$query = "SELECT * FROM exampleDB.users WHERE email = '".@mysqli_real_escape_string($link, $_POST['email'])."'";
@@ -26,18 +35,20 @@
 
 				$results = mysqli_num_rows($results);
 
-				if ($results) echo "That email is already registered. Do you want to log in?";
+				if ($results) $error =  "That email is already registered. Do you want to log in?";
 					else {
 
 						$query = "INSERT INTO exampleDB.users (email, password) VALUES('".mysqli_real_escape_string($link, $_POST['email'])."', '".md5(md5($_POST['email']).$_POST['password'])."')";
 						
 						mysqli_query($link, $query);
 
-						echo "You have been signed up!";
+						//echo "You have been signed up!";
 
 						$_SESSION['id']=mysqli_insert_id($link);
 
-						print_r($_SESSION);
+						header("Location:mainPage.php");
+
+						//print_r($_SESSION);
 
 						// Redirect to logged in page
 					}
@@ -66,16 +77,18 @@
 
 				if ($row) {
 
-					$_SESSION['id']=$row['id'];
+					$_SESSION['id']=$row['ID'];
 
-					print_r($row);
+					//print_r($row);
 
-					echo "You are now logged in!";
+					header("Location:mainPage.php");
+
+					//echo "You are now logged in!";
 
 					// Redirect to logged in page
 				} else {
 
-					echo " We could not find a user with that email or password. Please try again!";
+					$error = " We could not find a user with that email or password. Please try again!";
 				}		
 
 			}

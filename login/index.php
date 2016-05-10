@@ -117,6 +117,21 @@
 
             <p class="lead">This is the registration form, please enter your email and password.</p>
 
+            <?php
+              if ($error) {
+                echo '<div class="alert alert-danger">'.addslashes($error).'</div>';
+
+
+              }
+
+              if ($message) {
+                echo '<div class="alert alert-success">'.addslashes($message).'</div>';
+
+
+              }
+
+            ?>
+
             <form class="marginTop" method="post">
               <div class="input-group">
                 <span class="input-group-addon">eMail</span>
