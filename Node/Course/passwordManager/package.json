@@ -1,0 +1,19 @@
+{
+  "name": "password_manager",
+  "version": "1.0.0",
+  "description": "Maange your passwords locally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "Manage",
+    "Passwords"
+  ],
+  "author": "John Draper",
+  "license": "ISC",
+  "dependencies": {
+    "node-persist": "0.0.6"
+  }
+}
