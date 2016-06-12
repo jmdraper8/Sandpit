@@ -1,7 +1,7 @@
 //Module exports can be set to aything
 var request = require('request');
 
-module.exports =  function (currentLocation, callback) {
+module.exports =  function (currentLocation) {
 	//console.log('Got weather!');
 	var encodedLocation = encodeURIComponent(currentLocation);
 	var API = 'c44fe3b3a4c515159944e2647d258e5d';
